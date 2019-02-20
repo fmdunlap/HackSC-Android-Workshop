@@ -7,9 +7,6 @@
     <string name="button_sample_text">Some Answer!</string>
     <string name="default_score">Score: 0</string>
     <string name="empty_score">Score: </string>
-    <string name="button_text_key">button_text</string>
-    <string name="score_key">score_key</string>
-    <string name="serialized_question_key">serialized_question</string>
     <string name="lorem25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lobortis tellus eget tincidunt. Pellentesque efficitur mauris et magna faucibus, sed semper est commodo. Pellentesque.</string>
     <string name="something_went_wrong">Something went wrong!</string>
     <string name="network_error">Network Error</string>
