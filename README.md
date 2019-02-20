@@ -1,4 +1,14 @@
 # HackSC:Android Native Workshop - TrivHack!
+  - [Prerequisites](#prerequisites)
+    - [Getting Started](#getting-started)
+  - [Built With](#built-with)
+  - [The Actual Workshop](#the-actual-workshop)
+    - [Video](#video)
+    - [Slides](#slides)
+  - [Contributing](#contributing)
+  - [Me!](#me)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
 
 TrivHack is a simple, single activity application that allows the user to answer random trivia questions. Each question that the user gets correct will increment their score by one! How exciting! :D
 
