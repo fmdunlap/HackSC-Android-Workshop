@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HackSCLearn</string>
+    <string name="question">This is where a question will go!</string>
+    <string name="lorem50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dictum mauris. Etiam elementum ante at odio dignissim, non porta arcu maximus. Aenean egestas quis arcu quis convallis. Nam venenatis elementum vehicula. Integer id tempor ex, fringilla vulputate lacus. Cras scelerisque nibh sed lacus sodales consequat. Curabitur eget quam vehicula.</string>
+    <string name="lorem100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue tristique massa, id eleifend enim facilisis eu. Nam dignissim facilisis malesuada. Pellentesque dapibus orci ipsum, vel aliquet diam auctor et. Vivamus velit ante, hendrerit id augue a, condimentum porta ligula. Donec vulputate scelerisque arcu ut gravida. Curabitur tincidunt diam metus. Sed vestibulum nec justo sed semper. Nullam mollis in ligula eget posuere. Fusce tincidunt, felis sodales volutpat porta, tortor eros malesuada tellus, sit amet rhoncus est odio sit amet odio. Morbi et mattis quam, in pretium augue. Maecenas ac ex venenatis libero bibendum fermentum. Vestibulum ante ipsum primis in faucibus.</string>
+    <string name="lorem200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sem dui, venenatis in sapien quis, molestie maximus leo. Phasellus suscipit nisi vel augue molestie faucibus. Curabitur est ante, placerat ut hendrerit luctus, faucibus a orci. Fusce in nulla pharetra, laoreet felis vitae, cursus odio. Maecenas sed ante est. Etiam sed pharetra libero. Sed faucibus suscipit ipsum, convallis facilisis orci scelerisque et. Suspendisse at finibus odio. Sed rutrum nec ipsum non hendrerit. Aenean gravida, leo vitae placerat mattis, purus nisi tincidunt nisl, sed tristique dolor tortor quis tellus. Sed dictum id nisi quis feugiat. Phasellus placerat, ligula a maximus auctor, leo risus consequat felis, id vehicula orci nulla ac arcu. Vestibulum sapien tellus, eleifend nec porta et, sagittis ut orci. Morbi molestie nec orci ac faucibus. Ut id quam vitae augue elementum euismod. Duis ac sagittis libero, in sollicitudin erat. Nam gravida posuere massa sed consectetur. Aliquam mattis urna ex, et pulvinar velit venenatis in. Phasellus quis eros a risus interdum vulputate in eu eros. Ut at tincidunt justo. Sed et imperdiet ligula, eget rhoncus enim. Morbi nunc erat, commodo porttitor metus et, ullamcorper euismod tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis.</string>
+    <string name="button_sample_text">Some Answer!</string>
+    <string name="default_score">Score: 0</string>
+    <string name="empty_score">Score: </string>
+    <string name="button_text_key">button_text</string>
+    <string name="score_key">score_key</string>
+    <string name="serialized_question_key">serialized_question</string>
+    <string name="lorem25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lobortis tellus eget tincidunt. Pellentesque efficitur mauris et magna faucibus, sed semper est commodo. Pellentesque.</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="network_error">Network Error</string>
+    <string name="retry">Retry?</string>
+    <string name="exit">Exit</string>
+</resources>
