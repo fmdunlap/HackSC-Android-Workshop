@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         }
 
         // If we've saved a question, don't get a new one and instead JUST update the new UI
-        if(!presenter.hasSavedState(savedInstanceState)){
+        if (!presenter.hasSavedState(savedInstanceState)) {
             presenter.getNextQuestion();
         } else {
             // Restore state following lifecycle change.
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         outState = presenter.bundleState(outState);
         super.onSaveInstanceState(outState);
     }
-
 
 
     @Override

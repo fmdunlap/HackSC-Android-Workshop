@@ -5,13 +5,13 @@ import com.fdunlap.hacksclearn.retrofit.OpenTDBResponse;
 // The model class manages data just like a POJO. If you're familiar with Web Development, it's just
 // like 'state' in many frameworks.
 class MainActivityModel {
-    final String TAG = "MainActivityModel"; // Logging helper.
+    private final String TAG = "MainActivityModel"; // Logging helper.
 
     private int score;
     private OpenTDBResponse.Question currentQuestion;
     private int answerIndex;
 
-    int getScore(){
+    int getScore() {
         return score;
     }
 

@@ -1,6 +1,7 @@
 package com.fdunlap.hacksclearn.MainActivity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 
@@ -16,22 +17,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivityPresenter implements MainActivityContract.Presenter {
-    String TAG = "MainActivityPresenter";
     private final int MAX_BUTTONS = 4;
     // Just an arbitrarily large number since Rand was occasionally overflowing and causing... issues.
     private final int LARGE_NUM = 3999;
-
+    private final String TAG = "MainActivityPresenter";
+    // Create a random to select our correct answer
+    private Random rand = new Random();
     // This is the retrofit interface that allows us to access the OpenTrivia Database.
     // We'll talk at length about Retrofit and why it's awesome.
     private OpenTDBApiInterface client;
-    // Create a random to select our correct answer
-    Random rand = new Random();
-
     private MainActivityModel model;
     private MainActivityContract.View view;
 
 
-    MainActivityPresenter(MainActivityContract.View view){
+    MainActivityPresenter(MainActivityContract.View view) {
         model = new MainActivityModel();
         this.view = view;
 
@@ -68,7 +67,7 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
         return outState;
     }
 
-    private void updateView(){
+    private void updateView() {
         view.setScore(model.getScore());
 
         int numAnswers = model.getCurrentQuestion().getIncorrectAnswers().size() + 1;
@@ -93,16 +92,38 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
         view.setQuestionText(model.getCurrentQuestion().getText());
     }
 
+    /*
+    Quick little inner class to define the behavior of the buttons. Note that since Android uses
+    classes to deal with events, we can define our own constructors and store state data alongside
+    event listeners.
+    */
+    @Override
+    public void onAnswerButtonClicked(int buttonIndex) {
+        if (model.getAnswerIndex() == buttonIndex) {
+            view.showToast("That's correct!");
+            model.setScore(model.getScore() + 1);
+        } else {
+            String toastMessage = String.format("Sorry, that was incorrect :( The correct answer was: %s", model.getCurrentQuestion().getCorrectAnswer());
+            view.showToast(toastMessage);
+        }
+        getNextQuestion();
+    }
+
+    @Override
+    public boolean hasSavedState(Bundle savedInstanceState) {
+        return false;
+    }
+
     private class questionCallBackResponse implements Callback<OpenTDBResponse> {
         @Override
-        public void onResponse(Call<OpenTDBResponse> call, Response<OpenTDBResponse> response) {
-            OpenTDBResponse res = response.body();
-            int rCode = res.responseCode;
-            Log.d(TAG, res.responseCode + "");
+        public void onResponse(@NonNull Call<OpenTDBResponse> call,@NonNull Response<OpenTDBResponse> response) {
+            OpenTDBResponse responseBody = response.body();
+            int rCode = responseBody != null ? responseBody.responseCode : -1; // quick and easy way to abort if the body is null.
+            Log.d(TAG, "" + rCode);
             if (rCode == 0) {
                 /* We're just getting the first question. This is some functionality that could
                    definitely be made more robust with caching/randomizing/better fetching.*/
-                OpenTDBResponse.Question resultQuestion = res.questions.get(0);
+                OpenTDBResponse.Question resultQuestion = responseBody.questions.get(0);
                     /*
                     Due to a limitation in the OpenTDB API, we cannot specify how many answers we want,
                     only whether we want T/F questions or multiple choice. So, if we get a question
@@ -120,37 +141,15 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
                 }
             } else {
                 Log.d(TAG, "Response code was not 0!");
-                Log.d(TAG, res.toString());
+                Log.d(TAG, response.toString());
                 view.showRetryDialog();
             }
         }
 
         @Override
-        public void onFailure(Call<OpenTDBResponse> call, Throwable t) {
+        public void onFailure(@NonNull Call<OpenTDBResponse> call,@NonNull Throwable t) {
             Log.d(TAG, "Retry Dialog");
             view.showRetryDialog();
         }
-    }
-
-    /*
-    Quick little inner class to define the behavior of the buttons. Note that since Android uses
-    classes to deal with events, we can define our own constructors and store state data alongside
-    event listeners.
-    */
-    @Override
-    public void onAnswerButtonClicked(int buttonIndex) {
-        if (model.getAnswerIndex() == buttonIndex) {
-            view.showToast("That's correct!");
-            model.setScore(model.getScore()+1);
-        } else {
-            String toastMessage = String.format("Sorry, that was incorrect :( The correct answer was: %s", model.getCurrentQuestion().getCorrectAnswer());
-            view.showToast(toastMessage);
-        }
-        getNextQuestion();
-    }
-
-    @Override
-    public boolean hasSavedState(Bundle savedInstanceState) {
-        return false;
     }
 }
