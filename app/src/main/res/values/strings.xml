@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HackSCLearn</string>
+    <string name="app_name">TrivHack</string>
     <string name="question">This is where a question will go!</string>
     <string name="lorem50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dictum mauris. Etiam elementum ante at odio dignissim, non porta arcu maximus. Aenean egestas quis arcu quis convallis. Nam venenatis elementum vehicula. Integer id tempor ex, fringilla vulputate lacus. Cras scelerisque nibh sed lacus sodales consequat. Curabitur eget quam vehicula.</string>
     <string name="lorem100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue tristique massa, id eleifend enim facilisis eu. Nam dignissim facilisis malesuada. Pellentesque dapibus orci ipsum, vel aliquet diam auctor et. Vivamus velit ante, hendrerit id augue a, condimentum porta ligula. Donec vulputate scelerisque arcu ut gravida. Curabitur tincidunt diam metus. Sed vestibulum nec justo sed semper. Nullam mollis in ligula eget posuere. Fusce tincidunt, felis sodales volutpat porta, tortor eros malesuada tellus, sit amet rhoncus est odio sit amet odio. Morbi et mattis quam, in pretium augue. Maecenas ac ex venenatis libero bibendum fermentum. Vestibulum ante ipsum primis in faucibus.</string>
