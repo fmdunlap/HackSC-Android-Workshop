@@ -52,7 +52,7 @@ Here's [another tutorial](https://www.vogella.com/tutorials/Retrofit/article.htm
 *There'll be a link to the video presentation here shortly!*:)
 
 ### Slides
-*There'll be a link to the slides here shortly!*
+[Slides from Hack Night](https://docs.google.com/presentation/d/1XIzKVKPzBSlt9BRzoWFcucF5LsIp64RZjRu2LDvvGT4/edit?usp=sharing)
 
 ## Contributing
 
