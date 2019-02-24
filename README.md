@@ -49,7 +49,7 @@ Here's [another tutorial](https://www.vogella.com/tutorials/Retrofit/article.htm
 ## The Actual Workshop
 
 ### Video
-*There'll be a link to the video presentation here shortly!*:)
+[TrivHack Video Tutorial](https://www.youtube.com/watch?v=SLA5h747OXI&list=PLB7tCTXBff5zv57WBpSDvzGUR-xMNFnkK)
 
 ### Slides
 [Slides from Hack Night](https://docs.google.com/presentation/d/1XIzKVKPzBSlt9BRzoWFcucF5LsIp64RZjRu2LDvvGT4/edit?usp=sharing)
